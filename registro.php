@@ -37,7 +37,7 @@ $conexion = pg_connect($cadenaConexion) or die("Error en la Conexión: " . pg_la
                     </div>
                     <div cla="panel-footer">
                         <button type="submit" class="btn btn-warning"> Registrar </button>
-                        <button type="button" onclick="window.location.href = 'login.php'" class="btn btn-default"> Ingresar </button>
+                        <button type="button" onclick="window.location. href = 'PhpLoggin.php'" class="btn btn-default"> Ingresar </button>
                     </div>
                 </form>
             </div>                   

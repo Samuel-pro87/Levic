@@ -10,112 +10,7 @@
             <img src="images/imgr/logo.jpg" class="img-thumbnail w-100 h-50" alt="RH"/>
         </div><!--FIN DE LA COLUMNA UNO DE LA FILA UNO-->
 
-        <!--CREAMOS COLUMNA DOS DE FILA UNO-->
-        <div class="col-5 mx-auto">
-
-            <form action ="datoEmpleado.php" method ="POST" class="row">
-                <div class ="col-md-8 form-group"> 
-                    <input type="text" name ="curp" class ="form-control"
-                           placeholder="CURP del empleado" required>
-                </div>
-                <div class ="col-md-4 form-group"> 
-                    <input type="submit" class ="btn btn-outline-info btn-block"
-                           name="save_" value="Search">
-                </div>
-            </form>
-            <br>
-
-<!--<h4><?php echo date('D-M-Y'); ?></h1>-->
-            <button type="button" class="btn btn-success"> Fecha : <span class="badge badge-pill badge-light"><?php echo date('D-M-Y'); ?></span>   </button>
-        </div><!--FIN DE LA COLUMNA DOS DE LA FILA UNO-->
-
-        <!--        CREAMOS COLUMNA TRES DE FILA UNO
-                <div class="col-4">
-                    <div class="row justify-content-end">   
-                        TARJETA
-                        <div class="card w-50">
-                            <div class="card-header bg-warning">
-                                <p> Loggin </p>
-                            </div>
-                            <div class="card-body bg-ligth">
-                                <a href="login.php" class="img-fluid"><span class="badge badge-pill badge-primary"> iniciar Sesion</span> </a>
-                            </div>
-                            <div class="card-footer bg-primary">   
-        
-                            </div>
-                        </div>
-                    </div> FIN DE LA FILA
-                   <a href="login.php" class="img-fluid"><span class="badge badge-pill badge-primary"> Iniciar Sesion</span> </a>
-                </div>FIN DE LA COLUMNA TRES DE LA FILA UNO-->
-
-    </div><!-- FIN FILA UNO-->
-
-    <!--FILA DOS-->
-    <div class="row">   
-        <!--COLUMNA UNO FILA DOS-->
-        <div class="col-3">
-            <!--BARRA DE PROGRESO-->
-            <!--            <div class="progress" style="heigth:50px;">
-                            <div class="progress-bar w-50 bg-success progress-bar-striped progress-bar-animated"> 50% datos personales </div>
-                            <div class="progress-bar w-50 bg-danger progress-bar-striped progress-bar-animated"> 50% Equipo y Herramientas </div>
-                        </div>-->
-
-            <div class="row badge-dark justify-content-center"> <h5>   Menú de Opciones
-                </h5></div>
-
-            <br>
-            <!--            HACER EL MENU CON BOTONES-->
-            <!--            <div class="btn btn-group-vertical">
-                            <button type="button" class="btn btn-info"> Empleado </button> 
-                            <div class="btn-group-vertical">
-                                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown"> Asignacion de equipo y material</button> 
-                                <div class="dropdown-menu">   
-                                    <a href="#" class="dropdown-item">Equipo</a>
-                                    <a href="#" class="dropdown-item">Acceso</a>
-                                    <a href="#" class="dropdown-item">Herramienta</a>
-                                    <a href="#" class="dropdown-item">Kit</a>
-                                </div>
-                            </div>   
-                        </div>-->
-
-            <!--HACER EL MENU CON ENLACES-->
-            <div class="row"> 
-                <div class="col-12">
-                    <a href="#" class="btn btn-outline-info d-block disabled">Usuario</a>
-                </div>
-            </div>
-            <br>
-            <div class="row"> 
-                <div class="col-12">
-                    <a href="#" class="btn btn-outline-info d-block disabled">Mis equipos</a>
-                </div>
-            </div>
-            <br>
-            <div class="row"> 
-                <div class="col-12">
-                    <a href="#" class="btn btn-outline-info d-block disabled">Permisos autorizados</a>
-                </div>
-            </div>
-            <br>
-            <div class="row"> 
-                <div class="col-12">
-                    <a href="#" class="btn btn-outline-info d-block disabled">Mis herramientas</a>
-                </div>
-            </div>
-            <br>
-            <div class="row"> 
-                <div class="col-12">
-                    <a href="#" class="btn btn-outline-info d-block disabled">Kit higienico </a>
-                </div>
-            </div>
-            <br>
-            <div class="row"> 
-                <div class="col-12">
-                    <a href="#" class="btn btn-outline-info d-block disabled">Papeleria </a>
-                </div>
-            </div>
-        </div>  <!--FIN COLUMNA UNO FILA DOS-->
-
+     
         <!--COLUMNA DOS FILA DOS-->
         <div class="col-7">
             <div class="row justify-content-center"> 
@@ -148,15 +43,6 @@
                                     <input type="password" name="password" class="form-control" placeholder="Password" required>   <br>      
                                 </div> 
                             </div>
-                            <!--                             <h4>Usuario: </h4>
-                                                       <div class="input-group">
-                                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                                        <input type:="text" class="form-control" name="email" placeholder="Usuario" autofocus required><br>
-                                                            </div>-->
-                            <!--                                <h4>Password: </h4>
-                                                            <input type="password" name="password" class="form-control" placeholder="Password" required>   <br>      
-                                                        </div>-->
-
                             <div class="card-footer">   
                                 <div class=" row justify-content-center">
                                     <button type="submit" class="btn btn-primary text-center"> Validar </button>

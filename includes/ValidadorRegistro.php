@@ -47,6 +47,10 @@ class validadorRegistro {
             $this->mensaje .= "CURP ya está en USO, pongase en contacto con el administrador".$this->br;
             $this->estatus=0;
         }
+         if (!repositorioUsuario::empleadoExiste($CURP, $this->conexion)) {
+            $this->mensaje .= "No se puede crear un usuario con esta CURP".$this->br;
+            $this->estatus=0;
+        }
         //validar email
         if (!$this->variableIniciada($email)) {
             $this->mensaje .= "Ingresa tú Correo electronico, por favor".$this->br;

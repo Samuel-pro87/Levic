@@ -22,7 +22,7 @@ class validadorLogin {
                 $this->error = 0;
             } else {
                 $user = repositorioUsuario::obtenerUsuarioEmail($conexion, $email);
-            $this->cla = $user['curp'];
+            $this->cla = $user['id_curp'];
             $this->id_empleado = $user['id_puesto'];
             $this->contra = $user['password'];
 //            echo $this ->contra;

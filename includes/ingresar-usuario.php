@@ -20,13 +20,12 @@ if ($validador["error"] == 3) {
          case 29:
             header("Location: ../registro.php");
             break;
-//        case 23:
-//            header(".php");
-//            break;
-//          case 22:
-//            header(".php");
-//            break;
-
+        case 35:
+            //C:\xampp\htdocs\PhpDeVRSyC_alta_provedores\sc_requisicion_compra.php
+            header("Location: /PhpDeVRSyC_alta_provedores/hacerRequisicion.php");
+            session_start();
+            
+            break;
         default:
             header("Location: ../Mensajes.php");
             break;

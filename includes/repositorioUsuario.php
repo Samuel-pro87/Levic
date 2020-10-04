@@ -6,7 +6,7 @@ class repositorioUsuario {
         $usuarioInsertado = false;
         if (isset($conexion)) {
             try {
-                $sql = "INSERT INTO acceso (curp, email, password, id_puesto) values (:curp, :Email, :password, :id_empleado)";
+                $sql = "INSERT INTO acceso (id_curp, email, password, id_puesto) values (:curp, :Email, :password, :id_empleado)";
 
                 $sentencia = $conexion->prepare($sql);
                 extract($_POST);
@@ -39,7 +39,7 @@ class repositorioUsuario {
                 $resultado = $sentencia->fetch();
 
                 if (!empty($resultado)) {
-                    $usuario = new usuario($resultado['curp'], $resultado['email'], $resultado['password'], $resultado['id_puesto']);
+                    $usuario = new usuario($resultado['id_curp'], $resultado['email'], $resultado['password'], $resultado['id_puesto']);
                 }
                 else{
 //                    echo "<br/> usuario no existe";
@@ -60,7 +60,7 @@ class repositorioUsuario {
 
         if (isset($conexion)) {
             try {
-                $sql = "SELECT * FROM acceso WHERE curp = ?";
+                $sql = "SELECT * FROM acceso WHERE id_curp = ?";
                 $sentencia = $conexion->prepare($sql);
                 $sentencia->bindParam(1, $curp, PDO::PARAM_STR);
                 $sentencia->execute();
@@ -76,6 +76,31 @@ class repositorioUsuario {
         }
         return $curpExiste;
     }
+      public static function empleadoExiste($curp, $conexion) {
+
+        $empeleadoExiste = true;
+
+        if (isset($conexion)) {
+            try {
+                $sql = "SELECT * FROM rh_datos_personales WHERE curp = ?";
+                $sentencia = $conexion->prepare($sql);
+                $sentencia->bindParam(1, $curp, PDO::PARAM_STR);
+                $sentencia->execute();
+                $resultado = $sentencia->fetchAll();
+                if (count($resultado)) {
+                    $empleadoExiste = true;
+//                    print_r($resultado);
+//                    die();
+                } else {
+                    $empleadoExiste = false;
+                }
+            } catch (PDOException $ex) {
+                print "ERROR " . $ex->getMessage();
+            }
+        }
+        return $empleadoExiste;
+    }
+    
     public static function emailExiste($conexion, $email) {
         $emailExiste = true;
 
