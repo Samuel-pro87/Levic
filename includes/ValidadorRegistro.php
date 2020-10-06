@@ -48,8 +48,8 @@ class validadorRegistro {
             $this->estatus=0;
         }
          if (!repositorioUsuario::empleadoExiste($CURP, $this->conexion)) {
-            $this->mensaje .= "No se puede crear un usuario con esta CURP".$this->br;
-            $this->estatus=0;
+            $this->mensaje .= "No se puede crear un usuario con esta CURP".$CURP .$this->br;
+            $this->estatus=1;
         }
         //validar email
         if (!$this->variableIniciada($email)) {

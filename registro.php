@@ -9,9 +9,9 @@ $conexion = pg_connect($cadenaConexion) or die("Error en la Conexión: " . pg_la
     <div class="row">
         <div class="col-md-6 mx-auto">
             <div class="card card-body">
-                 <div class="panel-heading text-center">
-                <h2>== REGISTRO USUARIO ==</h2>
-            </div>
+                <div class="panel-heading text-center">
+                    <h2>== REGISTRO USUARIO ==</h2>
+                </div>
                 <form action="includes/registro-usuario.php" method="POST">  
                     <div class="panel-body">
                         <h4>CURP: </h4>
@@ -20,15 +20,15 @@ $conexion = pg_connect($cadenaConexion) or die("Error en la Conexión: " . pg_la
                         <input type="email" class="form-control" name="email" required><br>
                         <h4>Puesto: </h4>
                         <select name="id_empleado" id="rh_empleado" class="form-control" required>
-                        <?php
-                        $registro = pg_query($conexion, "SELECT * FROM rh_puesto");
-                        while ($reg = pg_fetch_array($registro)) {
-                            ?>
-                            <option value=" <?php echo $reg['id_puesto'] ?>">
-                                <?php echo $reg['puesto']; ?>
-                            </option>   
-                        <?php } ?>  
-                    </select> 
+                            <?php
+                            $registro = pg_query($conexion, "SELECT * FROM rh_puesto");
+                            while ($reg = pg_fetch_array($registro)) {
+                                ?>
+                                <option value=" <?php echo $reg['id_puesto'] ?>">
+                                    <?php echo $reg['puesto']; ?>
+                                </option>   
+                            <?php } ?>  
+                        </select> 
                         <br>
                         <h4>Password: </h4>
                         <input type="password" class="form-control" name="password1"> <br>
@@ -37,7 +37,7 @@ $conexion = pg_connect($cadenaConexion) or die("Error en la Conexión: " . pg_la
                     </div>
                     <div cla="panel-footer">
                         <button type="submit" class="btn btn-warning"> Registrar </button>
-                        <button type="button" onclick="window.location. href = 'PhpLoggin.php'" class="btn btn-default"> Ingresar </button>
+                        <button type="button" onclick="window.location.href = 'PhpLoggin.php'" class="btn btn-default"> Ingresar </button>
                     </div>
                 </form>
             </div>                   
@@ -46,5 +46,5 @@ $conexion = pg_connect($cadenaConexion) or die("Error en la Conexión: " . pg_la
 </div>
 <?php
 include_once "includes/footer.php";
-  pg_close($conexion);
+pg_close($conexion);
 ?>
